@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>&#12497;&#12473;&#12479;&#36899;&#37782;&#12472;&#12455;&#12493;&#12524;&#12540;&#12479;&#12540;</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main class="app" aria-labelledby="app-title">
+      <section class="generator">
+        <div class="masthead">
+          <p class="eyebrow">Markov Text Playground</p>
+          <h1 id="app-title">&#12497;&#12473;&#12479;&#36899;&#37782;&#12472;&#12455;&#12493;&#12524;&#12540;&#12479;&#12540;</h1>
+          <p class="lead">
+            &#25913;&#34892;&#21306;&#20999;&#12426;&#12398;&#35486;&#21477;&#12434;&#32032;&#26448;&#12395;&#12375;&#12390;&#12289;&#21336;&#35486;&#21336;&#20301;&#12391;&#12422;&#12427;&#12367;&#20877;&#25509;&#32154;&#12375;&#12414;&#12377;&#12290;
+          </p>
+        </div>
+
+        <form class="controls" id="generator-form">
+          <label class="field field-text">
+            <span>&#32032;&#26448;&#12398;&#35486;&#21477;</span>
+            <textarea id="source-text" rows="8">&#22823;&#35242;&#21451;
+&#12398;
+&#24444;&#22899;
+&#12398;
+&#36899;&#12428;
+&#12362;&#12356;&#12375;&#12356;
+&#12497;&#12473;&#12479;
+&#20316;&#12387;&#12383;
+&#12362;&#21069;</textarea>
+          </label>
+
+          <div class="control-grid">
+            <label class="field">
+              <span>&#36899;&#37782;&#12398;&#38542;&#25968;</span>
+              <select id="order">
+                <option value="1" selected>1&#35486;</option>
+                <option value="2">2&#35486;</option>
+                <option value="3">3&#35486;</option>
+              </select>
+            </label>
+
+            <label class="field">
+              <span>&#35486;&#25968;</span>
+              <input id="length" type="number" min="3" max="40" value="9">
+            </label>
+
+            <label class="field checkbox-field">
+              <input id="allow-loop" type="checkbox" checked>
+              <span>&#34892;&#12365;&#27490;&#12414;&#12426;&#12391;&#20877;&#38283;</span>
+            </label>
+          </div>
+
+          <div class="actions">
+            <button class="primary" type="submit">&#29983;&#25104;</button>
+            <button class="secondary" id="shuffle-source" type="button">&#31278;&#12434;&#28151;&#12380;&#12427;</button>
+          </div>
+        </form>
+
+        <section class="output" aria-live="polite">
+          <p class="output-label">Generated</p>
+          <p id="result">&#22823;&#35242;&#21451; &#12398; &#24444;&#22899; &#12398; &#36899;&#12428; &#12362;&#12356;&#12375;&#12356; &#12497;&#12473;&#12479; &#20316;&#12387;&#12383; &#12362;&#21069;</p>
+        </section>
+      </section>
+
+      <aside class="history" aria-label="&#29983;&#25104;&#23653;&#27508;">
+        <div class="history-head">
+          <h2>&#23653;&#27508;</h2>
+          <button id="clear-history" type="button" aria-label="&#23653;&#27508;&#12434;&#28040;&#12377;">&#28040;&#21435;</button>
+        </div>
+        <ol id="history-list"></ol>
+      </aside>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
